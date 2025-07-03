@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+    }
+
+    .contact-section {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        padding: 50px 20px;
+        background-color: #f4f4f4;
+    }
+
+    .contact-left {
+        background-color: #4b2e83;
+        color: white;
+        padding: 40px;
+        border-radius: 10px 0 0 10px;
+        max-width: 350px;
+    }
+
+    .contact-left h2 {
+        margin-top: 0;
+        font-size: 28px;
+    }
+
+    .contact-left p {
+        margin: 10px 0 20px;
+        font-size: 15px;
+    }
+
+    .contact-left .info {
+        margin-bottom: 10px;
+    }
+
+    .contact-left .info i {
+        margin-right: 10px;
+    }
+
+    .contact-right {
+        background-color: white;
+        padding: 40px;
+        border-radius: 0 10px 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex-grow: 1;
+        max-width: 600px;
+    }
+
+    .contact-right h3 {
+        margin-top: 0;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    .contact-form textarea {
+        grid-column: 1 / span 2;
+        resize: none;
+        height: 100px;
+    }
+
+    .submit-btn {
+        grid-column: 1 / span 2;
+        background-color: #4b2e83;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .submit-btn:hover {
+        background-color: #3b246a;
+    }
+
+    @media screen and (max-width: 768px) {
+        .contact-section {
+            flex-direction: column;
+        }
+
+        .contact-left,
+        .contact-right {
+            border-radius: 10px;
+            max-width: 100%;
+        }
+
+        .contact-form {
+            grid-template-columns: 1fr;
+        }
+
+        .submit-btn {
+            grid-column: auto;
+        }
+    }
+</style>
+
+<div class="contact-section">
+    <div class="contact-left">
+        <h2>Contact Us</h2>
+        <p>Not sure what you need? The team at Square Events will be happy to listen and suggest ideas you hadn’t
+            considered.</p>
+        <div class="info"><strong>Email:</strong> charankumar2666.com</div>
+        <div class="info"><strong>Support:</strong> (+91) 6302968849</div>
+    </div>
+
+    <div class="contact-right">
+        <h3>We'd love to hear from you! Let’s get in touch</h3>
+        <form class="contact-form" method="post" action="/contact">
+            {% csrf_token %}
+            <input type="text" name="name" class="form-control" id="name" placeholder="Full Name" required>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
+            <textarea name="description"class="form-control" id="description"  placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="mb-3 mx-5 my-3">
+    <label for="exampleFormControlInput1" class="form-label">Any thing you want to specify that improve our service</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="tag line about the issue">
+</div>
+<div class="mb-3 mx-5 my-3">
+    <label for="exampleFormControlTextarea1" class="form-label">you can elobrate here like how to resolve we would be very thankful for that</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+{% endblock body %}

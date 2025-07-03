@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block body %}
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+    }
+
+    .about-container {
+        height: 200vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Top Section */
+    .about-top {
+        background-color: #ffffff;
+        padding: 60px 20px;
+        text-align: center;
+        flex: 1;
+    }
+
+    .about-top h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .about-top p {
+        font-size: 18px;
+        max-width: 800px;
+        margin: 0 auto;
+        color: #555;
+    }
+
+    /* Bottom Section */
+    .about-bottom {
+        background-color: #e7ecf5;
+        padding: 50px 20px;
+        flex: 1;
+    }
+
+    .about-bottom h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+        color: #222;
+    }
+
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .testimonial-card {
+        background-color: #fff;
+        padding: 15px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .testimonial-card img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-card h4 {
+        margin: 5px 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .testimonial-card p {
+        font-size: 14px;
+        color: #666;
+    }
+
+    @media screen and (max-width: 768px) {
+        .about-top h1 {
+            font-size: 28px;
+        }
+
+        .about-top p {
+            font-size: 16px;
+        }
+
+        .about-bottom h2 {
+            font-size: 24px;
+        }
+    }
+</style>
+
+<div class="about-container">
+    <!-- Top Section -->
+    <div class="about-top">
+        <h1>About Daily Basis</h1>
+        <p>At <strong>Daily Basis</strong>, we help people simplify their everyday tasks and build better habits. Our mission is to make routines more enjoyable, efficient, and impactful—one step at a time.</p>
+    </div>
+     
+    <!-- Bottom Section -->
+    <div class="about-bottom">
+        <h2>Millions Trust Daily Basis</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                <h4>Arav Mehta</h4>
+                <p>“Daily Basis helped me streamline my entire routine!”</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User">
+                <h4>Nisha Verma</h4>
+                <p>“A smart, everyday solution I didn’t know I needed.”</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="User">
+                <h4>Rohan Shah</h4>
+                <p>“From morning to night, this app changed my productivity!”</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://randomuser.me/api/portraits/women/21.jpg" alt="User">
+                <h4>Sanya Kapoor</h4>
+                <p>“My entire team uses it. Game changer for us.”</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://randomuser.me/api/portraits/men/74.jpg" alt="User">
+                <h4>Harshit Desai</h4>
+                <p>“Simple, reliable, and effective. Highly recommended.”</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="User">
+                <h4>Payal Jain</h4>
+                <p>“Daily Basis is part of my daily life now.”</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+
+
