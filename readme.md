@@ -109,7 +109,7 @@ daily-basis/
 ## 🙌 Author
 
 **Charan Kumar**  
-[YouTube Channel](https://www.youtube.com/@charankumar)  
+[YouTube Channel](https://youtube.com/@charankumar_2666?si=QKadahw1q7M_SMBR)  
 📧 [charankumar2666@gmail.com](mailto:charankumar2666@gmail.com)
 
 ---
